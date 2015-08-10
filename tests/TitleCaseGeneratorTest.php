@@ -59,6 +59,15 @@
             $this->assertEquals("Beowulf on the Rocks", $result);
         }
 
+        function test_makeTitleCase_uniqueCase()
+        {
+            $test_TitleCaseGenerator = new TitleCaseGenerator;
+            $input = "here's to beowulf and McDuff and O'Malley";
+
+            $result = $test_TitleCaseGenerator->makeTitleCase($input);
+
+            $this->assertEquals("Here's to Beowulf and McDuff and O'Malley", $result);
+        }
     }
 
 ?>
